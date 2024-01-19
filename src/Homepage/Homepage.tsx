@@ -40,7 +40,7 @@ const Homepage: React.FC = () => {
       <h3 className={css(styles.cardHeader)}>Modern Tool Suite</h3>
       <div className={css(styles.cardsContainer)}>
       {
-        data?.map((dog) => <Card key={dog.link} header={dog.header} message={dog.subtext} imageLink={dog.link} />)
+        data ? data.map((dog) => <Card key={dog.link} header={dog.header} message={dog.subtext} imageLink={dog.link} />) : <p>Loading...</p>
       }
       </div>
     </div>
