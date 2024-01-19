@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import BlockhouseLogo from '../assets/blockhouseLogo.svg'
+import BlockhouseButton from './BlockhouseButton'
 
 const Navbar: React.FC = () => {
   return (
@@ -12,14 +13,14 @@ const Navbar: React.FC = () => {
                     </div>
                     <p>Blockhouse</p>
                 </div>
-                <p>Feautures</p>
-                <p>Dashboard</p>
-                <p>NLP</p>
-                <p>Analytics</p>
+                <p className={css(styles.basicLink)}>Feautures</p>
+                <p className={css(styles.basicLink)}>Dashboard</p>
+                <p className={css(styles.basicLink)}>NLP</p>
+                <p className={css(styles.basicLink)}>Analytics</p>
             </div>
             <div className={css(styles.navLinks)}>
-                <p>Enter App</p>
-                <p>Book Demo</p>
+                <BlockhouseButton onClick={() => { console.log('Enter site App') }} type={'clear'} text={'Enter App'} />
+                <BlockhouseButton onClick={() => { console.log('Book Demo') }} type={'solid'} text={'Book Demo'} />
             </div>
         </div>
   )
@@ -33,7 +34,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center',
-    color: 'white'
+    color: 'white',
+    backgroundColor: '#000000'
   },
   navLinks: {
     display: 'flex',
@@ -52,6 +54,9 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  basicLink: {
+    opacity: 0.7
   }
 })
 
