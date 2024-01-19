@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, css } from 'aphrodite'
+import { StyleSheet, css } from 'aphrodite/no-important'
 import { useNavigate } from 'react-router-dom'
 
 interface ICardProps {
@@ -25,9 +25,10 @@ const Card: React.FC<ICardProps> = (props) => {
 const styles = StyleSheet.create({
   cardContainer: {
     borderRadius: '8px',
-    border: '1px solid rgba(255, 255, 255, 0.05)',
     height: '250px',
-    padding: '20px'
+    padding: '20px',
+    backgroundBlendMode: 'darken',
+    backgroundColor: 'rgb(0 0 0 / 50%)'
   },
   header: {
     fontSize: 20
